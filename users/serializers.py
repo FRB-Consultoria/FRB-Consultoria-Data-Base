@@ -15,7 +15,7 @@ class UserSerializer(serializers.ModelSerializer):
         email = EmailMessage(
             subject="Bem vindo a FRB Consultoria",
             body = f"Olá {created.name}.\n\nObrigado por fazer parte da FRB consultoria!\n\nSua conta foi gerada automaticamente em nosso site. Para acessá-la e definir uma senha, clique no link abaixo:\n\nhttps://frbconsultoria.com.br/redefinirsenha/{created.id}",
-            from_email=f"FRB consultoria {'<contatofrb@frbconsultoria.com.br>'}",
+            from_email=f"FRB consultoria {'<contato@frbconsultoria.com.br>'}",
             to=[f"{created.email}"],
             headers={"Importance": "High"},
         )
